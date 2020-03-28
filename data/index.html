@@ -1,0 +1,120 @@
+<html>
+    <head>
+        <title>🎹 web-midi-player / javascript</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" type="text/css" href="./src/style.css" />
+       <script src="./src/web-midi-player.js"></script>
+       <script>
+       var path="";
+        window.addEventListener('message', function(ev) {
+
+
+        
+ 		if (ev.data[0] === 'Play') {
+ //				alert("index.html:14 Play ");
+
+ 			midiPlayer.play({ url: `./vfs/${ev.data[1]}` });
+		} 
+
+
+		});
+       </script>
+    </head>
+    <body>
+        <div class="src__Background-dz48ey-0 jMUcpb">
+            <div class="src__PageTransition-dz48ey-1 hlAElN">
+                <div class="Wrapper__View-sc-1at8ee3-0 liabYx">
+                    <div class="Wrapper__Container-sc-1at8ee3-1 cnbjLF">
+                        <h1 class="Wrapper__Heading-sc-1at8ee3-2 YSCho">
+                            web-midi-player
+                        </h1>
+                        <div class="Wrapper__AllTheLinks-sc-1at8ee3-3 bkbCap">
+                            <div
+                                class="ExternalLinks__Help-sc-1um357e-0 eLDhbb"
+                            >
+                                <a
+                                    href="https://npmjs.com/package/web-midi-player"
+                                    target="_blank"
+                                    class="ExternalLinks__Link-sc-1um357e-1 fjWjG"
+                                    >Package</a
+                                ><a
+                                    href="https://github.com/yvesgurcan/web-midi-player"
+                                    target="_blank"
+                                    class="ExternalLinks__Link-sc-1um357e-1 fjWjG"
+                                    >Repository</a
+                                ><a
+                                    href="https://midi.yvesgurcan.com/doc"
+                                    target="_blank"
+                                    class="ExternalLinks__Link-sc-1um357e-1 fjWjG"
+                                    >Documentation</a
+                                ><a
+                                    href="https://midi.yvesgurcan.com/"
+                                    target="_blank"
+                                    class="ExternalLinks__Link-sc-1um357e-1 fjWjG"
+                                    >Readme</a
+                                >
+                            </div>
+                        </div>
+
+ 
+                            <span
+                                title="Play track"
+                                class="Player__Button ehYJkT"
+                            >
+                                [PLAY]
+                            </span>
+
+
+ 
+                            <span
+                                title="Pause track"
+                                class="Player__Button ehYJkT"
+                            >
+                                [PAUSE]
+                            </span>
+
+
+                         
+                            <span
+                                title="Resume track"
+                                class="Player__Button ehYJkT"
+                            >
+                                [RESUME]
+                            </span>
+                        
+ 
+ 
+                        
+                            <span
+                                title="Stop track"
+                                class="Player__Button ehYJkT"
+                            >
+                                [STOP]
+                            </span>
+                        
+
+ 
+ 					</div>
+                </div>
+            </div>
+        </div>
+       <script src="./src/player-handler.js"></script> 
+        <script>
+ 
+        const queryString = window.location.search;
+        const urlParams = new URLSearchParams(queryString);
+		if (urlParams.get('path')) {
+			var path= urlParams.get('path');
+
+	//		alert("index.html:110 " + path);
+			
+			midiPlayer.play({ url: `./vfs/${path}` });
+
+		}
+
+
+
+      
+      	</script>
+    </body>
+</html>

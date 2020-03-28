@@ -1,0 +1,19 @@
+{
+  "type": "application",
+  "name": "OmetMidi",
+  "category": "development",
+  "singleton":true,
+  "server": null,
+  "title": {
+    "en_EN": "OmetMidi"
+  },
+  "description": {
+    "en_EN": "OmetMidi"
+  },
+  "mimes": [
+    "audio\/midi"
+  ],
+  "files": [
+    "main.js"
+  ]
+}
